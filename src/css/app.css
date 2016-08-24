@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+.journey-layout {
+    background-color: #2e80ab;
+    xposition: absolute;
+    xtop: 0;
+    xleft: 0;
+    height: 100%;
+    xwidth: 100%;
+    display: flex;
+}
+
+.blade {
+    background-color: #fff;
+    position: relative;
+    height: 100%;
+    box-shadow: -3px 0px 0px rgba(108,115,122,0.15);
+    flex: 0 0 auto;
+}
+
+.blade-size-small {
+    width: 315px;
+}
+
+.blade-size-medium {
+    width: 587px;
+}
+
+.blade-size-large {
+    width: 855px;
+}
+
+.blade-size-xlarge {
+    width: 1125px;
+}
+
+.blade-header {
+    background-color: #282d32;
+    color: #fff;
+    min-height: 77px;
+}
+
+.blade-header-title {
+    padding: 0 20px;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+}
+
+.blade-header .blade-header-title h2,
+.blade-header .blade-header-title h3 {
+    float: left;
+    clear: both;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blade-header .blade-header-title h2 {
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 18px;
+    max-width: calc(100% - 50px);
+}
+
+.blade-header .blade-header-title h3 {
+    font-family: "Segoe UI Semibold","Segoe WP Semibold","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 10px;
+    opacity: 0.5;
+    max-width: calc(100% - 40px);
+}
+
+.blade-actions {
+    height: 30px;
+    position: absolute;
+    right: 3px;
+}
+
+.blade-actions button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+    opacity: 0.5;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: opacity .2s ease-out;
+}
+
+.blade-actions button:hover {
+    opacity: 1;
+}
