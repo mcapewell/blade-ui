@@ -21,7 +21,7 @@ body, html {
     background-color: #fff;
     position: relative;
     height: 100%;
-    box-shadow: -3px 0px 0px rgba(108,115,122,0.15);
+    box-shadow: 0px 0px 5px rgba(108,115,122,0.5);
     flex: 0 0 auto;
 }
 
@@ -45,13 +45,14 @@ body, html {
     background-color: #282d32;
     color: #fff;
     min-height: 77px;
+    position: relative;
 }
 
 .blade-header-title {
     padding: 0 20px;
     position: absolute;
     top: 5px;
-    width: 100%;
+    width: calc(100% - 40px);
 }
 
 .blade-header .blade-header-title h2,
@@ -67,7 +68,7 @@ body, html {
 .blade-header .blade-header-title h2 {
     font-family: "Segoe UI Light","Segoe WP Light","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
     font-size: 18px;
-    max-width: calc(100% - 50px);
+    max-width: calc(100% - 20px);
 }
 
 .blade-header .blade-header-title h3 {
@@ -81,6 +82,7 @@ body, html {
     height: 30px;
     position: absolute;
     right: 3px;
+    top: 3px;
 }
 
 .blade-actions button {
@@ -93,8 +95,45 @@ body, html {
     width: 30px;
     cursor: pointer;
     transition: opacity .2s ease-out;
+    font-size: 12px;
 }
 
 .blade-actions button:hover {
     opacity: 1;
+}
+
+.blade-commands {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    display: flex;
+}
+
+.blade-commands button {
+    border: 0;
+    padding: 0 10px;
+    background-color: transparent;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.blade-commands button:hover {
+    background-color: #3d4247;
+}
+
+.blade-content-wrapper {
+    padding: 0 20px;
+    font-family: "Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 12px;
+    height: calc(100% - 80px); /* There has to be a better way to do this...*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.blade-content {
 }
