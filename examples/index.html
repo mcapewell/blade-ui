@@ -4,8 +4,58 @@
         <title>Example</title>
         <link rel="stylesheet" href="../src/css/app.css"/>
     </head>
-    <body>
-        <div class="journey-layout">
+    <body class="coreui-theme-blue">
+        <div class="coreui-portal">
+            <div class="coreui-topbar"></div>
+            <div class="coreui-portal-main">
+                <div class="coreui-sidebar coreui-sidebar-is-collapsed">
+                    <div class="coreui-sidebar-bar">
+                        <button class="coreui-sidebar-collapse-button" title="Open Menu">
+                            <i class="fa fa-bars fa-fw fa-lg"></i>
+                        </button>
+                        <ul class="coreui-sidebar-favourites">
+                            <li>
+                                <a href="#" title="Dashboard">
+                                    <div class="coreui-sidebar-icon"><i class="fa fa-home fa-fw fa-lg"></i></div>
+                                    <div class="coreui-sidebar-label">Dashboard</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Visualize">
+                                    <div class="coreui-sidebar-icon"><i class="fa fa-sitemap fa-fw fa-lg"></i></div>
+                                    <div class="coreui-sidebar-label">Visualize</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Settings">
+                                    <div class="coreui-sidebar-icon"><i class="fa fa-cogs fa-fw fa-lg"></i></div>
+                                    <div class="coreui-sidebar-label">Settings</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="More Applications">
+                                    <div class="coreui-sidebar-icon"><i class="fa fa-ellipsis-h fa-fw fa-lg"></i></div>
+                                    <div class="coreui-sidebar-label">More Applications</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="coreui-portal-content">
+                    <h1>Content</h1>
+                    <p>Some lovely content goes here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="coreui-splashscreen">
+            <div class="coreui-splashscreen-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 23 23" overflow="hidden">
+                    <path d="m22.475,11.311033c-4.76,2.630984 -8.641983,6.644968 -11.113964,11.499964c-2.472992,-4.853996 -6.353992,-8.868979 -11.110994,-11.495958l11.113994,-11.118995l11.110964,11.114989l0,0z" />
+                </svg>
+            </div>
+        </div>
+
+        <!--<div class="journey-layout">
             <div class="blade blade-size-small">
                 <div class="blade-header">
                     <div class="blade-header-title">
@@ -78,8 +128,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <script src="https://use.fontawesome.com/47fb412963.js"></script>
         <script src="../src/js/app.js"></script>
+        <script>
+            var el = document.getElementsByClassName('coreui-splashscreen')[0];
+            
+            el.onclick = function() {
+                document.body.className += ' loaded';
+            }
+        </script>
     </body>
 </html>

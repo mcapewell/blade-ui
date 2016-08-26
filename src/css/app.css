@@ -1,3 +1,4 @@
+/* Global */
 body {
     margin: 0;
     padding: 0;
@@ -6,6 +7,168 @@ body {
 body, html {
     height: 100%;
 }
+
+body, p {
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
+}
+
+/* Splashscreen */
+.coreui-splashscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2e80ab;
+    z-index: 1000;
+}
+
+.loaded .coreui-splashscreen {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 1s, opacity 0.5s ease-out;
+    transition: visibility 1s, opacity 0.5s ease-out;
+}
+
+.coreui-splashscreen-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.coreui-splashscreen-logo > svg {
+    fill: #fff !important;
+}
+
+/* Themes */
+.coreui-theme-blue {
+    background-color: #2e80ab;
+}
+
+.coreui-theme-blue .coreui-topbar {
+    background-color: #202428;
+    color: #fff;
+}
+
+.coreui-theme-blue .coreui-sidebar {
+    background-color: #282d32;
+    color: #fff;
+    border-color: #3d4247;
+}
+
+/* Portal */
+.coreui-portal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.coreui-portal-main {
+    xbackground-color: yellow;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    height: calc(100% - 40px);
+}
+
+.coreui-portal-content {
+    xbackground-color: lawngreen;
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Topbar */
+.coreui-topbar {
+    height: 40px;
+}
+
+/* Sidebar */
+.coreui-sidebar {
+    border-right: 1px solid;
+}
+
+.coreui-sidebar-is-collapsed .coreui-sidebar-bar {
+    width: 60px;
+}
+
+.coreui-sidebar-bar {
+    width: 225px;
+}
+
+.coreui-sidebar button {
+    background-color: transparent;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+}
+
+.coreui-sidebar button:hover {
+    background-color: #3d4247;
+}
+
+.coreui-sidebar-collapse-button {
+    border-bottom: 1px solid #3d4247 !important;
+}
+
+.coreui-sidebar-favourites {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.coreui-sidebar-favourites li {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    height: 40px;
+}
+
+.coreui-sidebar-favourites a {
+    xbackground-color: yellow;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.coreui-sidebar-favourites a:hover {
+    background-color: #3d4247;
+}
+
+.coreui-sidebar-icon {
+    xflex: 0 0 18px;
+    xdisplay: flex;
+    xalign-items: center;
+    padding-left: 18px;
+}
+
+.coreui-sidebar-is-collapsed .coreui-sidebar-label {
+    display: none;
+}
+
+.coreui-sidebar-label {
+
+}
+
+
+
+
 
 .journey-layout {
     background-color: #2e80ab;
