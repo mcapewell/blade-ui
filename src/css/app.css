@@ -68,7 +68,6 @@ body, p {
 }
 
 .coreui-portal-main {
-    xbackground-color: yellow;
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
@@ -76,7 +75,7 @@ body, p {
 }
 
 .coreui-portal-content {
-    xbackground-color: lawngreen;
+    background-color: lawngreen;
     flex: 1 1 auto;
     overflow-x: auto;
     overflow-y: hidden;
@@ -90,6 +89,7 @@ body, p {
 /* Sidebar */
 .coreui-sidebar {
     border-right: 1px solid;
+    font-size: 12px;
 }
 
 .coreui-sidebar-is-collapsed .coreui-sidebar-bar {
@@ -107,11 +107,11 @@ body, p {
     padding: 0;
     border: none;
     cursor: pointer;
-    height: 40px;
+    height: 39px;
     width: 100%;
     display: flex;
     align-items: center;
-    padding-left: 18px;
+    padding-left: 20px;
 }
 
 .coreui-sidebar button:hover {
@@ -133,15 +133,14 @@ body, p {
     display: flex;
     flex: 1 1 auto;
     align-items: center;
-    height: 40px;
+    height: 38px;
 }
 
 .coreui-sidebar-favourites a {
-    xbackground-color: yellow;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
-    height: 40px;
+    height: 38px;
     width: 100%;
     color: inherit;
     text-decoration: none;
@@ -152,10 +151,7 @@ body, p {
 }
 
 .coreui-sidebar-icon {
-    xflex: 0 0 18px;
-    xdisplay: flex;
-    xalign-items: center;
-    padding-left: 18px;
+    padding-left: 20px;
 }
 
 .coreui-sidebar-is-collapsed .coreui-sidebar-label {
@@ -171,7 +167,7 @@ body, p {
 
 
 .journey-layout {
-    background-color: #2e80ab;
+    background-color: yellow;
     xposition: absolute;
     xtop: 0;
     xleft: 0;
@@ -184,8 +180,8 @@ body, p {
     background-color: #fff;
     position: relative;
     height: 100%;
-    box-shadow: 0px 0px 5px rgba(108,115,122,0.5);
     flex: 0 0 auto;
+    border-right: 1px solid #3d4247 !important;
 }
 
 .blade-size-small {
@@ -226,6 +222,7 @@ body, p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: normal;
 }
 
 .blade-header .blade-header-title h2 {

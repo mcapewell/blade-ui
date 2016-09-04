@@ -4,13 +4,13 @@
         <title>Example</title>
         <link rel="stylesheet" href="../src/css/app.css"/>
     </head>
-    <body class="coreui-theme-blue">
+    <body class="loaded coreui-theme-blue">
         <div class="coreui-portal">
             <div class="coreui-topbar"></div>
             <div class="coreui-portal-main">
                 <div class="coreui-sidebar coreui-sidebar-is-collapsed">
                     <div class="coreui-sidebar-bar">
-                        <button class="coreui-sidebar-collapse-button" title="Open Menu">
+                        <button class="coreui-sidebar-collapse-button" title="Open menu">
                             <i class="fa fa-bars fa-fw fa-lg"></i>
                         </button>
                         <ul class="coreui-sidebar-favourites">
@@ -18,6 +18,12 @@
                                 <a href="#" title="Dashboard">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-home fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Dashboard</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Explore">
+                                    <div class="coreui-sidebar-icon"><i class="fa fa-search fa-fw fa-lg"></i></div>
+                                    <div class="coreui-sidebar-label">Explore</div>
                                 </a>
                             </li>
                             <li>
@@ -33,17 +39,64 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="More Applications">
+                                <a href="#" title="More applications">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-ellipsis-h fa-fw fa-lg"></i></div>
-                                    <div class="coreui-sidebar-label">More Applications</div>
+                                    <div class="coreui-sidebar-label">More applications</div>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="coreui-portal-content">
-                    <h1>Content</h1>
-                    <p>Some lovely content goes here.</p>
+
+                    <div class="journey-layout">
+                        <div class="blade blade-size-small">
+                            <div class="blade-header">
+                                <div class="blade-header-title">
+                                    <h2>Visualize</h2>
+                                    <h3>My resources</h3>
+                                </div>
+                                <div class="blade-actions">
+                                    <button title="Expand" type="button">
+                                        <i class="fa fa-expand fa-lg"></i>
+                                    </button>
+                                    <button title="Close" type="button">
+                                        <i class="fa fa-close fa-lg"></i>
+                                    </button>
+                                </div>
+                                <div class="blade-commands">
+                                    <button title="Add" type="button">
+                                        <i class="fa fa-plus fa-fw fa-lg"></i> Add
+                                    </button>
+                                    <button title="More" type="button">
+                                        <i class="fa fa-ellipsis-h fa-fw fa-lg"></i> More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="blade-content-wrapper">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a pharetra neque. Integer volutpat ipsum vel condimentum pulvinar. Nulla pellentesque luctus lacus, quis consequat diam imperdiet non. In hac habitasse platea dictumst. Curabitur non maximus lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam massa lectus, consectetur et felis at, mattis commodo ligula. Donec vel fermentum nibh. Pellentesque suscipit nibh ac nulla posuere, viverra tincidunt nibh accumsan. Nam consequat faucibus molestie. In hac habitasse platea dictumst. Vestibulum finibus felis at lorem consequat gravida. Morbi enim ante, egestas a orci tristique, suscipit pharetra felis.</p>
+                                <!--<p>Ut ac magna quis sem viverra eleifend eu ac lectus. Morbi mi magna, ullamcorper sit amet neque non, eleifend tempor nisl. Phasellus et tempus ipsum. Integer mattis nulla sapien, quis scelerisque mi pulvinar non. Nunc commodo accumsan mauris, sed vehicula felis aliquet ac. Nullam vitae neque pharetra, fermentum dolor maximus, congue purus. Aliquam iaculis fringilla neque id facilisis. Mauris ultrices sem ac porta pellentesque. Nam mauris arcu, porta quis aliquam sit amet, interdum at est. Fusce ut hendrerit quam, non auctor justo. Quisque quis fermentum ante, eget porta est. Vestibulum malesuada posuere felis, a accumsan sapien. Pellentesque fermentum fermentum metus. Etiam tellus risus, facilisis eu nulla non, placerat aliquam velit. Duis id dolor non odio dignissim fermentum sit amet a massa.</p>
+                                <p>Vestibulum mi felis, efficitur et pretium a, mollis at arcu. Sed ultricies, nunc ut faucibus accumsan, tortor justo tristique lectus, in dignissim tellus risus et leo. Praesent in auctor urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Sed imperdiet turpis eget maximus tincidunt. Nulla facilisi. Aliquam sed sollicitudin nunc.</p>
+                                <p>Vestibulum imperdiet ligula eu odio dignissim lobortis. Proin aliquam, odio quis venenatis laoreet, ex sapien lobortis risus, sit amet consequat tellus magna quis enim. Donec sed volutpat lacus. Sed in posuere eros, nec mollis felis. Fusce rutrum eu urna nec cursus. Duis pulvinar gravida eleifend. Integer elit dui, hendrerit sit amet egestas eu, placerat sit amet elit. Sed et nibh et lacus dictum aliquam.</p>
+                                <p>Cras nisi ex, pharetra at justo a, auctor euismod libero. Morbi tellus enim, dictum a purus vitae, rutrum sollicitudin ex. Vivamus sed elit suscipit, sodales massa non, mollis nisi. Fusce dictum fermentum rhoncus. In dictum finibus ultricies. Fusce est nisi, porta scelerisque sem at, ultricies pretium orci. Donec vitae purus ac massa pellentesque ultrices. Vestibulum eget leo tincidunt, rutrum nisl et, pellentesque eros. Morbi vitae lobortis elit. Nulla non nisl fringilla, tristique velit non, porttitor felis. Nunc pulvinar in dolor ut hendrerit. Donec felis velit, egestas in pharetra eleifend, molestie ac elit.</p>-->
+                            </div>
+                        </div>
+                        <div class="blade blade-size-small">
+                            <div class="blade-header">
+                                <div class="blade-header-title">
+                                    <h2>Another blade</h2>
+                                </div>
+                                <div class="blade-actions">
+                                    <button title="Close" type="button">
+                                        <i class="fa fa-close fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="blade-content-wrapper">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -54,89 +107,7 @@
                 </svg>
             </div>
         </div>
-
-        <!--<div class="journey-layout">
-            <div class="blade blade-size-small">
-                <div class="blade-header">
-                    <div class="blade-header-title">
-                        <h2>Service health</h2>
-                        <h3>My resources</h3>
-                    </div>
-                    <div class="blade-actions">
-                        <button title="Close" type="button">
-                            <i class="fa fa-close fa-lg"></i>
-                        </button>
-                    </div>
-                    <div class="blade-commands">
-                        <button type="button">
-                            <i class="fa fa-refresh fa-fw fa-lg"></i> Refresh
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-th fa-fw fa-lg"></i> Columns
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-filter fa-fw fa-lg"></i> Filter
-                        </button>
-                    </div>
-                </div>
-                <div class="blade-content-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a pharetra neque. Integer volutpat ipsum vel condimentum pulvinar. Nulla pellentesque luctus lacus, quis consequat diam imperdiet non. In hac habitasse platea dictumst. Curabitur non maximus lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam massa lectus, consectetur et felis at, mattis commodo ligula. Donec vel fermentum nibh. Pellentesque suscipit nibh ac nulla posuere, viverra tincidunt nibh accumsan. Nam consequat faucibus molestie. In hac habitasse platea dictumst. Vestibulum finibus felis at lorem consequat gravida. Morbi enim ante, egestas a orci tristique, suscipit pharetra felis.</p>
-                    <p>Ut ac magna quis sem viverra eleifend eu ac lectus. Morbi mi magna, ullamcorper sit amet neque non, eleifend tempor nisl. Phasellus et tempus ipsum. Integer mattis nulla sapien, quis scelerisque mi pulvinar non. Nunc commodo accumsan mauris, sed vehicula felis aliquet ac. Nullam vitae neque pharetra, fermentum dolor maximus, congue purus. Aliquam iaculis fringilla neque id facilisis. Mauris ultrices sem ac porta pellentesque. Nam mauris arcu, porta quis aliquam sit amet, interdum at est. Fusce ut hendrerit quam, non auctor justo. Quisque quis fermentum ante, eget porta est. Vestibulum malesuada posuere felis, a accumsan sapien. Pellentesque fermentum fermentum metus. Etiam tellus risus, facilisis eu nulla non, placerat aliquam velit. Duis id dolor non odio dignissim fermentum sit amet a massa.</p>
-                    <p>Vestibulum mi felis, efficitur et pretium a, mollis at arcu. Sed ultricies, nunc ut faucibus accumsan, tortor justo tristique lectus, in dignissim tellus risus et leo. Praesent in auctor urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Sed imperdiet turpis eget maximus tincidunt. Nulla facilisi. Aliquam sed sollicitudin nunc.</p>
-                    <p>Vestibulum imperdiet ligula eu odio dignissim lobortis. Proin aliquam, odio quis venenatis laoreet, ex sapien lobortis risus, sit amet consequat tellus magna quis enim. Donec sed volutpat lacus. Sed in posuere eros, nec mollis felis. Fusce rutrum eu urna nec cursus. Duis pulvinar gravida eleifend. Integer elit dui, hendrerit sit amet egestas eu, placerat sit amet elit. Sed et nibh et lacus dictum aliquam.</p>
-                    <p>Cras nisi ex, pharetra at justo a, auctor euismod libero. Morbi tellus enim, dictum a purus vitae, rutrum sollicitudin ex. Vivamus sed elit suscipit, sodales massa non, mollis nisi. Fusce dictum fermentum rhoncus. In dictum finibus ultricies. Fusce est nisi, porta scelerisque sem at, ultricies pretium orci. Donec vitae purus ac massa pellentesque ultrices. Vestibulum eget leo tincidunt, rutrum nisl et, pellentesque eros. Morbi vitae lobortis elit. Nulla non nisl fringilla, tristique velit non, porttitor felis. Nunc pulvinar in dolor ut hendrerit. Donec felis velit, egestas in pharetra eleifend, molestie ac elit.</p>
-                </div>
-            </div>
-            <div class="blade blade-size-small">
-                <div class="blade-header">
-                    <div class="blade-header-title">
-                        <h2>Events</h2>
-                    </div>
-                    <div class="blade-actions">
-                        <button title="Close" type="button">
-                            <i class="fa fa-close fa-fw fa-lg"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="blade blade-size-medium">
-                <div class="blade-header">
-                    <div class="blade-header-title">
-                        <h2>Another blade with a longer title because this blade is very wide and we need to fill the space!</h2>
-                    </div>
-                    <div class="blade-actions">
-                        <button title="Close" type="button">
-                            <i class="fa fa-close fa-fw fa-lg"></i>
-                        </button>
-                    </div>
-                    <div class="blade-commands">
-                        <button type="button">
-                            <i class="fa fa-plus fa-fw fa-lg"></i> Add
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-pencil fa-fw fa-lg"></i> Edit
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-trash-o fa-fw fa-lg"></i> Delete
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-cloud-upload fa-fw fa-lg"></i> Import
-                        </button>
-                        <button type="button">
-                            <i class="fa fa-ellipsis-h fa-fw fa-lg"></i> More
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <script src="https://use.fontawesome.com/47fb412963.js"></script>
         <script src="../src/js/app.js"></script>
-        <script>
-            var el = document.getElementsByClassName('coreui-splashscreen')[0];
-            
-            el.onclick = function() {
-                document.body.className += ' loaded';
-            }
-        </script>
     </body>
 </html>
