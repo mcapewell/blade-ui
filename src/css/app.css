@@ -72,13 +72,15 @@ body, p {
     flex-flow: row nowrap;
     align-items: stretch;
     height: calc(100% - 40px);
+    xbackground-color: red;
 }
 
 .coreui-portal-content {
-    background-color: lawngreen;
+    xbackground-color: lawngreen;
     flex: 1 1 auto;
     overflow-x: auto;
     overflow-y: hidden;
+    height: 100%;
 }
 
 /* Topbar */
@@ -90,6 +92,7 @@ body, p {
 .coreui-sidebar {
     border-right: 1px solid;
     font-size: 12px;
+    min-width: 60px;
 }
 
 .coreui-sidebar-is-collapsed .coreui-sidebar-bar {
@@ -162,18 +165,12 @@ body, p {
 
 }
 
-
-
-
-
-.journey-layout {
-    background-color: yellow;
-    xposition: absolute;
-    xtop: 0;
-    xleft: 0;
-    height: 100%;
-    xwidth: 100%;
+/* Blade */
+.coreui-blade-layout {
+    xbackground-color: yellow;
     display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
 .blade {
@@ -289,10 +286,12 @@ body, p {
     padding: 0 20px;
     font-family: "Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
     font-size: 12px;
-    height: calc(100% - 80px); /* There has to be a better way to do this...*/
+    xheight: calc(100% - 80px); /* There has to be a better way to do this...*/
+    height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    box-sizing: border-box;
+    xbox-sizing: border-box;
+    xbackground-color: yellow;
 }
 
 .blade-content {
