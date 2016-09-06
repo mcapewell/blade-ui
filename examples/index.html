@@ -9,7 +9,7 @@
             <div class="coreui-topbar">
                 <div class="coreui-topbar-title">Vision</div>
                 <div class="coreui-topbar-breadcrumb"></div>
-                <div class="coreui-topbar-user"><span data-bind="text: personName"></span> <i class="fa fa-user"></i></div>
+                <div class="coreui-topbar-user"><span data-bind="text: userName"></span> <i class="fa fa-user"></i></div>
             </div>
             <div class="coreui-portal-main">
                 <div class="coreui-sidebar coreui-sidebar-is-collapsed" id="mySidenav">
@@ -25,25 +25,25 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Explore">
+                                <a href="#" title="Explore" data-bind="click: addBlade.bind($data, 'Explore', '', 'blade-size-medium')">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-search fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Explore</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Visualize">
+                                <a href="#" title="Visualize" data-bind="click: addBlade.bind($data, 'Visualize', 'My resources', 'blade-size-small')">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-sitemap fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Visualize</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Settings">
+                                <a href="#" title="Settings" data-bind="click: addBlade.bind($data, 'Settings', '', 'blade-size-small')">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-cogs fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Settings</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="More applications">
+                                <a href="#" title="More applications" data-bind="click: addBlade.bind($data, 'More applications', '', 'blade-size-small')">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-ellipsis-h fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">More applications</div>
                                 </a>
@@ -53,26 +53,27 @@
                 </div>
                 <div class="coreui-portal-content">
                     <div class="coreui-blade-layout">
-                        <div class="blade blade-size-small">
+                        <!-- ko foreach: blades -->
+                        <div class="blade" data-bind="css: bladeSize">
                             <div class="blade-header">
                                 <div class="blade-header-title">
-                                    <h2>Visualize</h2>
-                                    <h3>My resources</h3>
+                                    <h2 data-bind="text: title"></h2>
+                                    <h3 data-bind="text: subTitle"></h3>
                                 </div>
                                 <div class="blade-actions">
                                     <button title="Expand" type="button">
                                         <i class="fa fa-expand fa-lg"></i>
                                     </button>
-                                    <button title="Close" type="button">
+                                    <button title="Close" type="button" data-bind="click: $parent.removeBlade">
                                         <i class="fa fa-close fa-lg"></i>
                                     </button>
                                 </div>
                                 <div class="blade-commands">
                                     <button title="Add" type="button">
-                                        <i class="fa fa-plus fa-fw fa-lg"></i> Add
+                                        <i class="fa fa-plus fa-lg"></i> Add
                                     </button>
                                     <button title="More" type="button">
-                                        <i class="fa fa-ellipsis-h fa-fw fa-lg"></i> More
+                                        <i class="fa fa-ellipsis-h fa-lg"></i> More
                                     </button>
                                 </div>
                             </div>
@@ -84,6 +85,7 @@
                                 <p>Cras nisi ex, pharetra at justo a, auctor euismod libero. Morbi tellus enim, dictum a purus vitae, rutrum sollicitudin ex. Vivamus sed elit suscipit, sodales massa non, mollis nisi. Fusce dictum fermentum rhoncus. In dictum finibus ultricies. Fusce est nisi, porta scelerisque sem at, ultricies pretium orci. Donec vitae purus ac massa pellentesque ultrices. Vestibulum eget leo tincidunt, rutrum nisl et, pellentesque eros. Morbi vitae lobortis elit. Nulla non nisl fringilla, tristique velit non, porttitor felis. Nunc pulvinar in dolor ut hendrerit. Donec felis velit, egestas in pharetra eleifend, molestie ac elit.</p>
                             </div>
                         </div>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>

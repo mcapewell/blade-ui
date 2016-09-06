@@ -39,8 +39,22 @@ Node.prototype.removeClass = function (className) {
     return this;
 };
 
-var myViewModel = {
-    personName: 'Matthew Capewell',
-};
 
-ko.applyBindings(myViewModel);
+
+function AppViewModel() {
+    var self = this;
+    
+    self.userName = 'Matthew Capewell';
+
+    self.blades = ko.observableArray();
+    
+    self.addBlade = function(title, subTitle, bladeSize) {
+        self.blades.push({ title: title, subTitle: subTitle, bladeSize: bladeSize });
+    };
+    
+    self.removeBlade = function() {
+        self.blades.remove(this);
+    }
+}
+
+ko.applyBindings(new AppViewModel());

@@ -121,7 +121,7 @@ body, p {
 
 .coreui-topbar-user > i {
     padding-left: 7px;
-    opacity: 0.5;
+    xopacity: 0.5;
 }
 
 /* Sidebar */
