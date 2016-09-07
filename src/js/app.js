@@ -39,7 +39,13 @@ Node.prototype.removeClass = function (className) {
     return this;
 };
 
-
+ko.bindingHandlers['dynamicHtml'] = {
+    'update': function (element, valueAccessor, allBindings, viewModel, bindingContext) {
+        // setHtml will unwrap the value if needed
+        ko.utils.setHtml(element, valueAccessor());
+        ko.applyBindingsToDescendants(bindingContext, element);
+    }
+};
 
 function AppViewModel() {
     var self = this;
@@ -48,48 +54,21 @@ function AppViewModel() {
 
     self.blades = ko.observableArray();
     
-    self.addBlade = function(title, subTitle, bladeSize) {
-        self.blades.push({ title: ko.observable(title), subTitle: subTitle, bladeSize: bladeSize, content: ko.observable('<p>Loading...</p>') });
+    self.addBlade = function(title, subTitle, bladeSize, url) {
+        self.blades.push({ title: ko.observable(title), subTitle: subTitle, bladeSize: bladeSize, content: ko.observable() });
 
-        //self.blades()[0].title('Testing...');
-        self.blades()[0].content('<p>Core components:</p>' +
-                                '<ul class="coreui-blade-list">' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-search fa-fw"></i>Explore</a>' +
-                                        '<i class="fa fa-star fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-sitemap fa-fw"></i>Visualize</a>' +
-                                        '<i class="fa fa-star fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-cogs fa-fw"></i>Settings</a>' +
-                                        '<i class="fa fa-star fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                '</ul>' +
-                                '<p>Other applications:</p>' +
-                                '<ul class="coreui-blade-list">' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-desktop fa-fw"></i>CENTUM</a>' +
-                                        '<i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-area-chart fa-fw"></i>Exaquantum</a>' +
-                                        '<i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-database fa-fw"></i>Exaquantum/AMD</a>' +
-                                        '<i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-file-text fa-fw"></i>Exaquantum/ARA</a>' +
-                                        '<i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                    '<li>' +
-                                        '<a href="#"><i class="fa fa-bell fa-fw"></i>Exaquantum/SER</a>' +
-                                        '<i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>' +
-                                    '</li>' +
-                                '</ul>');
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                self.blades()[self.blades().length - 1].content(this.responseText);
+                //ko.applyBindings(viewModel, $("#dynamic")[0]);
+                //ko.applyBindings(self, $("#dynamic")[0]);
+            }
+        };
+
+        xhttp.open("GET", url + ((/\?/).test(url) ? "&" : "?") + (new Date()).getTime(), true);
+        xhttp.send();
     };
     
     self.removeBlade = function() {

@@ -350,11 +350,11 @@ body, p {
 }
 
 .coreui-blade-list li:first-of-type {
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid #e5e5e5;
 }
 
 .coreui-blade-list li {
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
     height: 40px;
     display: flex;
     align-items: center;
@@ -379,7 +379,7 @@ body, p {
 }
 
 .coreui-blade-list li:hover {
-    background-color: #f5f5f5;
+    background-color: #e5e5e5;
 }
 
 .coreui-blade-list li i.favourite {
