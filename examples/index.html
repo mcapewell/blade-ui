@@ -69,12 +69,11 @@
                                     </button>
                                 </div>
                                 <div class="blade-commands">
+                                    <!-- ko foreach: commands -->
                                     <button title="Add" type="button">
-                                        <i class="fa fa-plus fa-lg"></i> Add
+                                        <i class="fa fa-lg" data-bind="css: icon"></i> <span data-bind="text: title"></span>
                                     </button>
-                                    <button title="More" type="button">
-                                        <i class="fa fa-ellipsis-h fa-lg"></i> More
-                                    </button>
+                                    <!-- /ko -->
                                 </div>
                             </div>
                             <div class="blade-content-wrapper" data-bind="dynamicHtml: content">

@@ -55,7 +55,16 @@ function AppViewModel() {
     self.blades = ko.observableArray();
     
     self.addBlade = function(title, subTitle, bladeSize, url) {
-        self.blades.push({ title: ko.observable(title), subTitle: subTitle, bladeSize: bladeSize, content: ko.observable() });
+        self.blades.push({
+            title: ko.observable(title),
+            subTitle: subTitle,
+            bladeSize: bladeSize,
+            content: ko.observable(),
+            commands: [
+                { title: 'Add', icon: 'fa-plus' },
+                { title: 'More', icon: 'fa-ellipsis-h' }
+            ]
+        });
 
         var xhttp = new XMLHttpRequest();
 
