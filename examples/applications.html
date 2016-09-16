@@ -16,23 +16,9 @@
 <p>Other applications:</p>
 <ul class="coreui-blade-list">
     <li>
-        <a href="#"><i class="fa fa-desktop fa-fw"></i>CENTUM</a>
-        <i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-area-chart fa-fw"></i>Exaquantum</a>
-        <i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-database fa-fw"></i>Exaquantum/AMD</a>
-        <i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-file-text fa-fw"></i>Exaquantum/ARA</a>
-        <i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-bell fa-fw"></i>Exaquantum/SER</a>
+        <a href="#" data-bind="click: $parent.addBlade.bind($data, 'Service Dashboard', 'Last refreshed: a few seconds ago', 'blade-size-large', 'dashboard.html', [{ title: 'Refresh', icon: 'fa-refresh', click: '' },{ title: 'Edit', icon: 'fa-pencil', click: '' },{ title: 'Fullscreen', icon: 'fa-expand', click: $root.fullscreen }])">
+            <i class="fa fa-dashboard fa-fw"></i>Service Dashboard
+        </a>
         <i class="fa fa-star-o fa-lg favourite" title="Favourite"></i>
     </li>
 </ul>

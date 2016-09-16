@@ -25,25 +25,25 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Explore" data-bind="click: addBlade.bind($data, 'Explore', '', 'blade-size-medium', 'blank.html')">
+                                <a href="#" title="Explore" data-bind="click: addBlade.bind($data, 'Explore', '', 'blade-size-medium', 'blank.html', [])">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-search fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Explore</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Visualize" data-bind="click: addBlade.bind($data, 'Visualize', 'My resources', 'blade-size-small', 'blank.html')">
+                                <a href="#" title="Visualize" data-bind="click: addBlade.bind($data, 'Visualize', 'My resources', 'blade-size-small', 'blank.html', [])">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-sitemap fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Visualize</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Settings" data-bind="click: addBlade.bind($data, 'Settings', '', 'blade-size-small', 'settings.html')">
+                                <a href="#" title="Settings" data-bind="click: addBlade.bind($data, 'Settings', '', 'blade-size-small', 'settings.html', [])">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-cogs fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">Settings</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="More applications" data-bind="click: addBlade.bind($data, 'More applications', '', 'blade-size-small', 'applications.html')">
+                                <a href="#" title="More applications" data-bind="click: addBlade.bind($data, 'More applications', '', 'blade-size-small', 'applications.html', [])">
                                     <div class="coreui-sidebar-icon"><i class="fa fa-ellipsis-h fa-fw fa-lg"></i></div>
                                     <div class="coreui-sidebar-label">More applications</div>
                                 </a>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="blade-commands">
                                     <!-- ko foreach: commands -->
-                                    <button title="Add" type="button">
+                                    <button type="button" data-bind="attr: { title: title }, click: click">
                                         <i class="fa fa-lg" data-bind="css: icon"></i> <span data-bind="text: title"></span>
                                     </button>
                                     <!-- /ko -->

@@ -54,16 +54,13 @@ function AppViewModel() {
 
     self.blades = ko.observableArray();
     
-    self.addBlade = function(title, subTitle, bladeSize, url) {
+    self.addBlade = function(title, subTitle, bladeSize, url, commands) {
         self.blades.push({
             title: ko.observable(title),
             subTitle: subTitle,
             bladeSize: bladeSize,
             content: ko.observable(),
-            commands: [
-                { title: 'Add', icon: 'fa-plus' },
-                { title: 'More', icon: 'fa-ellipsis-h' }
-            ]
+            commands: commands
         });
 
         var xhttp = new XMLHttpRequest();
@@ -71,8 +68,6 @@ function AppViewModel() {
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 self.blades()[self.blades().length - 1].content(this.responseText);
-                //ko.applyBindings(viewModel, $("#dynamic")[0]);
-                //ko.applyBindings(self, $("#dynamic")[0]);
             }
         };
 
@@ -82,6 +77,27 @@ function AppViewModel() {
     
     self.removeBlade = function() {
         self.blades.remove(this);
+    }
+
+    self.fullscreen = function() {
+        //TODO: this should be done differently so it works on a per blade basis...
+        var divObj = document.getElementById('dashboard');
+
+        if (divObj.requestFullscreen) {
+            divObj.requestFullscreen();
+        }
+        else if (divObj.msRequestFullscreen) {
+            divObj.msRequestFullscreen();
+        }
+        else if (divObj.mozRequestFullScreen) {
+            divObj.mozRequestFullScreen();
+        }
+        else if (divObj.webkitRequestFullscreen) {
+            divObj.webkitRequestFullscreen();
+        }
+        else {
+            console.log('Fullscreen API is not supported');
+        }
     }
 }
 
